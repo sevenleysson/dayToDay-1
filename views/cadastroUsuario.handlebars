@@ -1,12 +1,41 @@
+
 <div class="form-group">
     <form action='' method="POST">
-    <p>Cadastro</p>
-    <input type='text' name='nome' placeholder="digite seu nome completo*" /><br />
-    <input type='email' name='email' placeholder="digite um e-mail válido*" /><br />
-    <input type='password' name='senha' placeholder="digite uma senha para acesso*" />
-    <input type='password' name='senhaA' placeholder="digite a senha novamente*" /><br />
+    <h3>Cadastro</h3><br />
+    <input type="text" 
+    class="form-control" 
+    id="exampleInputText1" 
+    aria-describedby="textHelp"
+    name='nome' 
+    placeholder="digite seu nome completo*"
+    ><br />
+    <input type="email" 
+    class="form-control" 
+    id="exampleInputEmail1" 
+    aria-describedby="emailHelp"
+    name='email' 
+    placeholder="digite um e-mail válido*"
+    ><br />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <input type="password" 
+        class="form-control" 
+        id="inputPassword4"
+        placeholder="digite uma senha para acesso*"
+        >
+        </div>
+        <div class="form-group col-md-6">
+        <input type="password" 
+        class="form-control" 
+        id="inputPassword4"
+        placeholder="digite a senha novamente*"
+        >
+        </div>
+    </div>
+    
+    <button type="submit" 
+    class="btn btn-primary">Cadastrar</button> 
 
-    <button type="submit" name="cadastrar">Cadastrar</button>   
-</form>
+    </form>
 </div>
 

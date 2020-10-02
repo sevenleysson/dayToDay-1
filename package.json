@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "gitignore": "^0.6.0",
     "handlebars": "^4.7.6",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "responsive-carousel": "^1.5.8"
   }
 }

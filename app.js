@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-// rotas
+// rota get p renderizar a home
 app.get('/', (request,response) => {
     response.render('home.handlebars')
 });
@@ -39,6 +39,18 @@ app.post('/cadastrar', (request,response) => {
     let senhaA = request.body.senhaA;
     console.log(nome + ' -- ' + email + ' -- ' + senha + ' -- ' + senhaA);
 });
+
+// rota get para login p renderizar a pagina
+app.get('/login', (request,response) => {
+    response.render('login.handlebars')
+});
+
+// rota post p login 
+app.post('/login', (request, response) => {
+    let email = request.body.nome;
+    let senha = request.body.senha;
+    console.log(email + ' -- ' + senha);
+})
 
 // servidor
 app.listen(portaHttp, () => {
