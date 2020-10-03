@@ -1,0 +1,11 @@
+.Footer {
+    background-color: rgb(45, 45, 49);
+    text-align: center;
+    color: #4B85A7;
+    width: 100%;
+}
+.Footer a{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
