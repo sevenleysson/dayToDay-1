@@ -1,19 +1,27 @@
 <div class="container">
-    <br />
-    <form action='' method="POST">
-        <h3>Qual evento você está procurando?</h3><br />
-        <div class="form-row">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Pesquisar por nome do evento">
+    <div class="container box-login">
+        <div class="row">
+            <div class="col-sm-9  mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Qual evento você está procurando?</h5>
+                        <form class="form-inline form-signin">
+                            <div class="form-label-group form-group mb-2">
+                                <input type="text" id="inputNomeEvento" class="form-control" placeholder="Nome do Evento" required autofocus>
+                                <label for="inputNomeEvento">Nome do Evento</label>
+                            </div>
+                                <div class="form-label-group form-group  mx-sm-3 mb-2">
+                                <label for="inputDate" class="sr-only">Data</label>
+                            <input type="date" class="form-control" id="inputDate" placeholder="Data">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2  btn-lg text-uppercase">Procurar</button>
+                        </form>
+                    </div>            
+                </div>
+            </div>   
         </div>
-        <div class="col">
-            <input type="date" class="form-control" placeholder="Pesquisar por data">
-        </div>
-        <div class="col">
-            <button type="submit" class="form-control btn btn-dark">Procurar</button>
-        </div>
-        </div>
-    </form>
+    </div>
+    
 
     <br />
     <table class="table">

@@ -1,36 +1,31 @@
 <div class="container">
 
-    <div class="form-group">
-    <br />
-    <form action='' method="POST">
+  <div class="container box-login">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Login</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email</label>
+              </div>
 
-    <h3>Login</h3><br />
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Senha</label>
+              </div>
 
-    <input type="email" 
-    class="form-control" 
-    id="exampleInputEmail1" 
-    aria-describedby="emailHelp"
-    name='email' 
-    placeholder="e-mail"
-    >
-    
-    <br />
-    <input type="password" 
-    class="form-control" 
-    id="exampleInputPassword1" 
-    aria-describedby="passwordlHelp"
-    name='senha' 
-    placeholder="senha"
-    >
-    <br />
-
-    <button type="submit" 
-    class="btn btn-dark">Entrar</button>
-    </form>
-
-    <br />
-    <p>Ainda não tem cadastro?</p>
-    <a href="/cadastrar"><button class="btn btn-warning">Cadastre-se</button></a>
-   
+              
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
+              <hr class="my-4">
+              <a href="/cadastrar">Cadastrar-se</a>
+              
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
