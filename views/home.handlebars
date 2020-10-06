@@ -1,5 +1,7 @@
-<div class="container">
-    <br />
+<!--<div class="container">
+  
+    
+   
     <form action='' method="POST">
         <h3>Qual evento você está procurando?</h3><br />
         <div class="form-row">
@@ -14,24 +16,46 @@
         </div>
         </div>
     </form>
-    <br />
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="/images/Banner01.jpg" class="d-block w-100" alt="..."></div>
-    <div class="carousel-item">
-      <img src="/images/Banner02.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span></a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span></a>
-    </div>
+-->
+    
 </div>
+
+<section class="home-slider owl-carousel">
+ 
+   
+      <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Busque qual vai ser o seu próximo evento!</h1>
+              <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><!--Uma forma facilitada de encotrar eventos--></p>
+              <p><a href="/buscarEvento" class="btn btn-primary btn-primary-2 p-3 px-xl-5 py-xl-3">Procurar</a></p>
+            </div>
+            <div class="col-md-7 ftco-animate">
+            	<img src="images/vetor.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(images/bg_2.jpg);">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+          <div class="row slider-text align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-5 wrap col-sm-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+              <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Divulgue seu evento e alcance um maior número de público! </h1>
+              <p class="mb-4 mb-md-5"><!--Um jeito simplificado para difivular seu evento! --></p>
+             <a href="/addEvento" class="btn btn-primary btn-primary-2 p-3 px-xl-5 py-xl-3">Divulgar</a></p>
+            </div>
+            <div class="col-md-7 ftco-animate">
+            	<img src="images/vetor2.png" class="img-fluid" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+</section>
