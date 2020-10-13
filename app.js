@@ -8,6 +8,7 @@ const mongoose     = require("mongoose");
 const path         = require('path');
 const session      = require("express-session");
 const flash        = require("connect-flash");
+<<<<<<< HEAD
 
 
 
@@ -34,11 +35,41 @@ app.use((resquet, response, next ) =>{
 #######################################*/
 
 // config express
+=======
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 const app          = express()
 
+
+//## ------------CONFIGURAÇÕES -----------------##
+
+// Sessão 
+
+/*
+app.use(session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(function() {
+    
+    app.use(express.session({ cookie: { maxAge: 60000 }}));
+    app.use(flash());
+  });
+
+//Middleware
+app.use((resquet, response, next ) =>{
+  response.locals.success_msg = request.flash("success_msg")  
+  response.locals.error_msg = request.flash("error_msg")
+  next()
+})
+*/
 // config porta do servidor
 const portaHttp = 9999;
 
+<<<<<<< HEAD
+=======
+// config express
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 
 
 // config handlebars
@@ -60,10 +91,14 @@ mongoose.connect("mongodb://localhost/db_base", ).then(() => {
     console.log("Erro na conexão" + err)
 });
 
+<<<<<<< HEAD
 
 
 
 // ######### Model - Eventos ##############
+=======
+// Model - Eventos 
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 
 const eventoSchema = mongoose.Schema({
     nome: {
@@ -97,6 +132,12 @@ app.use(express.static(path.join(__dirname, "public")))
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 //## -------------ROTAS -----------------##
 
 // rota get p renderizar a home
@@ -124,6 +165,71 @@ app.post('/cadastrar', (request,response) => {
     console.log(nome + ' -- ' + email + ' -- ' + senha + ' -- ' + senhaA);
 });
 
+<<<<<<< HEAD
+=======
+// rota post Evento Cadastrado 
+app.get("/cadastrado", (request, response)=>{
+
+    
+});
+
+app.post("/cadastrado", (request,response) => {
+    response.render('eventoCadastrado.handlebars')
+   
+
+    let nomeE = request.body.nomeEvento;
+    let localE = request.body.localEvento;
+    let dataE = request.body.dataEvento;
+    let horaE = request.body.horaEvento; 
+    var erros = []
+
+    if(!nomeE || typeof nomeE == undefined || nomeE == null){
+        erros.push({texto: "Nome Inválido"})
+    }
+
+    if(!localE || typeof localE == undefined || localE == null){
+        erros.push({texto: "Local Inválido"})
+    }
+
+    if(!dataE || typeof dataE == undefined || data == null){
+        erros.push({texto: "Data Inválido"})
+    }
+
+    if(erros.length>0){
+      response.render("cadastroEvento")
+    }else{
+        new novoEvento({
+            nome: nomeE,
+            local: localE,
+            data: dataE,
+            horario: horaE
+        }).save().then(() => {
+            console.log("Evento criado com sucesso")
+        }).catch((err) => {
+            console.log("Erro ao adicionar evento" +err)
+        })
+    }
+
+
+
+
+
+    
+
+});
+
+// rota get para login p renderizar a pagina
+app.get('/login', (request,response) => {
+    response.render('login.handlebars')
+});
+// rota post p login 
+app.post('/login', (request, response) => {
+    let email = request.body.email;
+    let senha = request.body.senha;
+    console.log(email + ' -- ' + senha);
+})
+
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 // rota get para cadastrar evento
 app.get('/addEvento', (request,response) => {
     response.render('cadastroEvento.handlebars')
@@ -208,6 +314,7 @@ app.get('/editarEvento:id', (request, response) =>{
    
 })
 
+<<<<<<< HEAD
 app.post('/eventoEditado', (request, response) =>{
     novoEvento.findOne({_id: request.body.id}).then((eventos) =>{
         eventos.nome = request.body.nomeEvento
@@ -237,6 +344,8 @@ app.get('/deletarEvento:id', (request, response) =>{
 })
 
 
+=======
+>>>>>>> 7650c5b817b136b96a60ca0b609ea96580e0bdb5
 
 
 // servidor
